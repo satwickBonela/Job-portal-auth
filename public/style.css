@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #0a1f44, #0d47a1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #cfd9df, #e2ebf0, #9fa5d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+/* AUTH CARD */
+.auth-container {
+  background: #ffffff;
+  width: 360px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  margin-left: auto;
+  margin-right: 80px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #08306b;
+}
+
+/* SOCIAL LOGIN */
+.social-login {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-login p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* LINKS */
+.link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: bold;
+}
