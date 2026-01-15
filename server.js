@@ -2,7 +2,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const admin = require("firebase-admin");
 
-const serviceAccount = require("./serviceAccountKey.json");
+const admin = require("firebase-admin");
+
+admin.initializeApp({
+  credential: admin.credential.cert({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+  }),
+});
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -34,6 +42,8 @@ app.post("/login", (req, res) => {
   res.send("Login Successful");
 });
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+
   console.log("Server running on http://localhost:3000");
 });
