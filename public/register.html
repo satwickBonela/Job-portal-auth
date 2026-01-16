@@ -15,14 +15,21 @@
   <input type="email" name="email" placeholder="Email" required>
   <input type="password" name="password" placeholder="Password" required>
 
-  <select name="role" required>
-    <option value="">Select Role</option>
-    <option value="jobseeker">Job Seeker</option>
-    <option value="employer">Employer / Recruiter</option>
-  </select>
+  <div class="role-container">
+    <label class="role-box">
+      <input type="radio" name="role" value="jobseeker" required>
+      <span>👤 Job Seeker</span>
+    </label>
+
+    <label class="role-box">
+      <input type="radio" name="role" value="employer">
+      <span>🏢 Employer / Recruiter</span>
+    </label>
+  </div>
 
   <button type="submit">Register</button>
 </form>
+
 
 
     <div class="social-login">
