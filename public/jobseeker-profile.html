@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Seeker Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">JOB-PORTAL</div>
+
+<div class="auth-container">
+  <h2>Job Seeker Profile</h2>
+
+  <form action="/jobseeker-profile" method="POST" enctype="multipart/form-data">
+
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="text" name="skills" placeholder="Skills (e.g. Java, React)" required>
+    <input type="text" name="phone" placeholder="Contact Number" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <label><strong>Upload Resume (PDF/DOC)</strong></label>
+    <input type="file" name="resume" required>
+
+    <button type="submit">Save Profile</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employer Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">JOB-PORTAL</div>
+
+<div class="auth-container">
+  <h2>Employer Profile</h2>
+
+  <form action="/employer-profile" method="POST">
+
+    <input type="text" name="companyName" placeholder="Company Name" required>
+    <input type="text" name="companyDomain" placeholder="Company Domain" required>
+    <input type="text" name="location" placeholder="Company Location" required>
+    <input type="text" name="contact" placeholder="Contact Number" required>
+    <input type="email" name="email" placeholder="Company Email" required>
+
+    <button type="submit">Save Profile</button>
+  </form>
+</div>
+
+</body>
+</html>
