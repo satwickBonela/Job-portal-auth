@@ -99,3 +99,10 @@ button:hover {
   color: #0d47a1;
   font-weight: bold;
 }
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

@@ -32,14 +32,27 @@ app.get("/", (req, res) => {
 
 /* REGISTER */
 app.post("/register", async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, role } = req.body;
+
   try {
-    await admin.auth().createUser({ email, password });
-    res.send("User Registered Successfully");
+    const user = await admin.auth().createUser({
+      email,
+      password,
+    });
+
+    // Store role as custom claim
+    await admin.auth().setCustomUserClaims(user.uid, {
+      role: role,
+    });
+
+    res.send(
+      `User registered successfully as ${role}. You can now login.`
+    );
   } catch (error) {
     res.send(error.message);
   }
 });
+
 
 /* LOGIN (UI ONLY FOR NOW) */
 app.post("/login", (req, res) => {
